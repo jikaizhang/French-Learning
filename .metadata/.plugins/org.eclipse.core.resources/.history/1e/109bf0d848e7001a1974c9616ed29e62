@@ -1,0 +1,4 @@
+logging.level.org.springframework = debug
+
+spring.security.user.name = abc
+spring.security.user.password = def

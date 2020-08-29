@@ -1,0 +1,21 @@
+<h1>Vocabulary</h1>
+<div class="container">
+    <div class="alert alert-warning" *ngIf="english.invalid && vocabForm.dirty">Enter an English translation</div>
+    <div class="alert alert-warning" *ngIf="french.invalid && vocabForm.dirty">Enter a French vocabulary</div>
+
+    <form (ngSubmit)="!vocabForm.invalid && saveVocab()" #vocabForm="ngForm">
+        <fieldset class="form-group">
+            <label>French</label>
+            <input type="text" #french="ngModel" [(ngModel)]="vocab.french" 
+                class="form-control" name="french" required="required">
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label>English</label>
+            <input type="text" #english="ngModel" [(ngModel)]="vocab.english" 
+                class="form-control" name="english" required="required">
+        </fieldset>
+
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+</div>

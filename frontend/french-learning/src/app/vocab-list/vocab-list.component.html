@@ -1,0 +1,34 @@
+<h1>My Vocabularies</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <button (click)=toggleShowEnglish()> {{englishBtnText}}</button>
+        <button (click)=toggleShowFrench()> {{frenchBtnText}}</button>
+      </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th *ngIf='showFrench'>French</th>
+                <th *ngIf='showEnglish'>English</th>
+                <th>Date Added</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vocab of vocabs">
+                <td *ngIf='showFrench'>{{vocab.french}}</td>
+                <td *ngIf='showEnglish'>{{vocab.english}}</td>
+                <td>{{vocab.dateAdded | date:'MMMM dd, yyyy':'utc'}}</td>
+                <td><button (click)="updateVocab(vocab.id)" class="btn btn-success">Update</button></td>
+                <td><button (click)="deleteVocab(vocab.id)" class="btn btn-warning">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+        <button (click)="addVocab()" class="btn btn-success">Add</button>
+    </div>
+</div>

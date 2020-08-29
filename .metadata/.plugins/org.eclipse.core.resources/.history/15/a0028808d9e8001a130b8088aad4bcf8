@@ -1,0 +1,2 @@
+insert into vocab(id, username, french, english, date_added)
+values(10001, 'abc', 'Merci', 'Thank you', sysdate());

@@ -1,0 +1,5 @@
+package com.jikaizhang.rest.webservices.restfulwebservices.vocab;
+
+public class VocabJpaRepository {
+
+}
