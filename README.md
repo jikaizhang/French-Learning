@@ -7,5 +7,6 @@ stored in the H2 database. A JWT Spring Security Framework is set up to authenti
 
 This is a screenshot of a sample vocabulary list of the website:
 <img src="https://github.com/jikaizhang/French-Learning/blob/master/Vocab%20List.jpg">
+
 This is a screenshot of the H2 database:
 <img src="https://github.com/jikaizhang/French-Learning/blob/master/H2%20Database.jpg">
